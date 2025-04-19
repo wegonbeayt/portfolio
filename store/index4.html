@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D4AF37; /* Gold - 60% */
+            color: #1F3A93; /* Deep Blue */
+            background-image: url('https://mythologian.net/wp-content/uploads/2014/07/chimera-1024x702.jpg'); /* Mythological Griffin */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background: rgba(226, 114, 91, 0.8); /* Terracotta with transparency */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            color: white;
+            position: relative;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            color: white;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #CD7F32; /* Bronze - 10% */
+            border-radius: 5px;
+            background-color: rgba(245, 222, 179, 0.8); /* Light Gold with transparency */
+            color: #1F3A93;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background: #CD7F32; /* Bronze */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        button:hover {
+            background: #A66D3C;
+            transform: scale(1.1);
+        }
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+            color: white;
+        }
+        .mythology-decor {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 100px;
+            height: 100px;
+            background-image: url('https://example.com/dragon-icon.png'); /* Dragon Decorative Icon */
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="mythology-decor"></div>
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p>Email: contact@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Street, City, Country</p>
+        </div>
+    </div>
+</body>
+</html>
